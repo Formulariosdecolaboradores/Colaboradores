@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -97,48 +97,48 @@
   <h1 id="miTitulo">Bienvenido a formulario Colresin</h1> 
 
   <div id="formulario" style="display: block;">
-    <button class="btn" onclick="verificarClave('clave1', 'https://docs.google.com/forms/d/e/1FAIpQLSfeO_RO4hvFtIqg7h7WqTtvdFKetmDyiANnbI0-1fegFVtoHg/viewform');">Facturación carbón</button>
+     <button class="btn" onclick="verificarClave('clave1', 'https://docs.google.com/forms/d/e/1FAIpQLSfeO_RO4hvFtIqg7h7WqTtvdFKetmDyiANnbI0-1fegFVtoHg/viewform');">Facturación carbón</button>
     <button class="btn" onclick="verificarClave('clave2', 'https://docs.google.com/forms/d/e/1FAIpQLSeo60umRo1n2J3gZbLgNwtgEadEsjrqjeP3Bnoxiz3UZT8FCw/viewform');">Bitácora de caldera</button>
     <button class="btn" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfSX7Txeq4anlisN1fMKC6tTgiCJBx7ETJJLW6aSn_PT6_X3A/viewform';">Aditivo para caldera</button>
     <button class="btn" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdD0GaXMz3h0XLHMFLYaZkO0kdEcAfJK-RxflMtHigUSLRtVA/viewform';">Estado caldera</button>
     <button class="btn" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdy9wTmNdA_iIkCkEm5GnD9nJws49vg5LieI3uy_gny3yK5UQ/viewform';">Registro de carbonilla</button>
     <button class="btn" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScafRkHROYXL9EWXQQiy2--O7tutSStD4mCOvfLQoIjNh4BYQ/viewform';">Purga caldera</button>
     <button class="btn" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd56oV8weaBachVlGRF-12sOQXnReNSUgbkgWCumr4OMi6QwQ/viewform';">Registro consumo carbón</button>
+  
   </div>
-
-  <div id="data-container"></div>
-
+  
   <div class="bg-image"></div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbxzrS2xCwDyQkKHkEt_oEJYh-rz7D5V1v1ZGL_LdlNgiqcBR1doEJD7Jvpc0Mm89LgJBw/exec";
-    const SPREADSHEET_ID = "1PHC-98Wzz9AezcrSYYC6X__Qvd15-80azXPHL9RcJP0";
-    const SHEET_NAME = "Estado de Caldera";
-    const CELL_REFERENCE = "I3";
-
+    const AS_URL_BASE =  "https://script.google.com/macros/s/AKfycbxzrS2xCwDyQkKHkEt_oEJYh-rz7D5V1v1ZGL_LdlNgiqcBR1doEJD7Jvpc0Mm89LgJBw/exec";
+    
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=") + 2);
-
+    
     function verificarClave(clave, urlDestino) {
       var inputClave = prompt("Ingrese la clave:");
 
       if (inputClave === clave) {
-        window.location.href = urlDestino;
-      } else {
-        if (k) {
-          fetch(AS_URL_BASE + '?k=' + k)
-            .then(r => r.text())
-            .then((r) => {
-              console.log(r);
-              if (r) {
-                document.location.replace(r);
-              }
-            })
-            .catch(err => console.log(err));
+            window.location.href = urlDestino;
+        } else {
+            if (k) {
+                fetch(AS_URL_BASE + '?k=' + k)
+                    .then(r => r.text())
+                    .then((r) => {
+                        console.log(r);
+                        
+                        if (r) {
+                            document.location.replace(r);
+                        }
+                    })
+                    .catch(err => console.log(err));
+            }
         }
-      }
     }
+</script>
 
-    $(document).ready(function() {
-      // Obtiene el valor de la celda de la hoja
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  
+ 
+</body>
+</html>
